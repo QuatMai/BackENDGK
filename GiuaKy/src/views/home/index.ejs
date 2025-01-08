@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trang web đầu tiên của tôi</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .title b {
+      color: #333;
+    }
+
+    .depth-wrap {
+      margin-top: 20px;
+    }
+
+    .depth-wrap ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .depth-wrap li {
+      margin: 10px 0;
+    }
+
+    .depth-wrap a {
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 1px solid #007BFF;
+      border-radius: 5px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .depth-wrap a:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      margin: 10px;
+      font-size: 16px;
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Đăng Ký Qua Campuchia</h1>
+    <p>
+      <% if( dUser && dUser.username && dUser.username !='' ){ %>
+        <div class="title">
+          Xin chào, <b>
+            <%= dUser.username %>
+          </b>
+          <em class="far fa-chevron-down">
+          </em>
+        </div>
+        <div class="depth-wrap wrapper">
+          <ul>
+            <li>
+              <a target="_self" href="/update_info" title="Cập Nhật">Cập Nhật</a>
+            </li>
+            <li>
+              <a target="_self" href="/change_password" title="Cập nhật mật khẩu">Cập nhật mật khẩu</a>
+            </li>
+            <li>
+              <a target="_self" href="/signout" title="Thoát">Thoát</a>
+            </li>
+          </ul>
+        </div>
+        <% } else{ %>
+          <a target="_self" href="/signin" title="Đăng nhập">Đăng nhập</a>
+          <a target="_self" href="/signup" title="Đăng ký">Đăng ký</a>
+          <% } %>
+    </p>
+  </div>
+</body>
+
+</html>

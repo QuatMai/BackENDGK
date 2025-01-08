@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Signup</h1>
+    <form method="POST" action="/signup_submit" enctype="application/x-www-form-urlencoded">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" required>
+
+      <button type="submit">Sign Up</button>
+
+      <p>
+          <a href="/">Trang chủ</a>
+      </p>
+      <p>
+          <a href="/signin">Đăng nhập</a>
+      </p>
+      <p>
+          <!-- <a href="/reset">Reset mật khẩu</a> -->
+      </p>
+      
+    </form>
+  </div>
+  <script src="js/signup.js"></script>
+</body>
+</html>

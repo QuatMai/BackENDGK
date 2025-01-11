@@ -28,7 +28,7 @@ app
     .use(express.static('src/public'))
 
 //phải đặt trước router
-connectDB(process.env.DB_URI);
+connectDB('mongodb://localhost:27017/GIUAKY');
 
 //router
 app.use('/', homeRouter);

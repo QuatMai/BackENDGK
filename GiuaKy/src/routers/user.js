@@ -9,7 +9,7 @@ import {
     userPageSignOut,//Đăng xuất
 
 
-    userPageUpdateInfo,//Update
+    userPageUpdateInfo,//trang Update thong tin chi hien thị
     userPageUpdateInfoXuLy,//XuLy
 
     userPageChangePassword,//Pass
@@ -30,11 +30,11 @@ router.post(`/signup_submit`, userPageSignUpSubmit);
 //Trang đăng xuất
 router.get(`/signout`, userPageSignOut);
 
-//Trang update
+//Trang update thong tin chi hien thi
 router.get(`/update_info`, userPageUpdateInfo);
 router.post(`/update_info_xu_ly`, userPageUpdateInfoXuLy);//xu ly update
 
-//Trang pass
+//Trang update mat khau
 router.get(`/change_password`, userPageChangePassword);
 router.post(`/change_password_xu_ly`, userPageChangePasswordXuLy);//xu ly pass
 export default router;
